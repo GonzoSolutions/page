@@ -16,9 +16,9 @@ import Logo from "./assets/logo.svg";
 export default () => {
     return (
         <>
-            <banner>
-                <left></left>
-                <content>
+            <div id="banner">
+                <div id="left"></div>
+                <div id="content">
                     <img src={Logo} />
                     <div>
                         Gonzo
@@ -27,9 +27,9 @@ export default () => {
                     <div>
                         We put the human back in the loop
                     </div>
-                </content>
-                <right></right>
-            </banner>
+                </div>
+                <div id="right"></div>
+            </div>
         </>
     )
 };
