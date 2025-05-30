@@ -2,15 +2,39 @@ div#banner {
     display: grid;
     grid: auto / auto 50vw auto;
     font: bold 0.8em/1 "Oxanium", sans-serif;
+    width: 100%;
+    height: 100%;
 }
 
 div#banner > #left {}
 div#banner > #right {}
 
+/* -------------------------------------------------_*/
+
+@media (width <= 600px) {
+    div#banner {
+        grid: auto / auto 100vw auto;
+    }
+
+    div#banner > #left {
+        display: none;
+    }
+
+    div#banner > #right{
+        display: none;
+    }
+
+    div#banner > #content {
+        width: 100vw;
+    }
+}
+
+/* -------------------------------------------------_*/
+
 div#banner > #content {
     display: block;
     margin: 0;
-    padding: 1em;
+    padding: 0;
     align-items: center;
     align-content: center;
     text-align: center;
@@ -20,16 +44,19 @@ div#logo {
     margin: 0;
     padding: 0.25em;
     font: bold 1em/1 "Oxanium", sans-serif;
+    text-align: center;
 }
 
 div#name {
     margin: 0;
     padding: 0.25em;
     font: bold 2em/1 "Oxanium", sans-serif;
+    text-align: center;
 }
 
 div#slogan {
     margin: 0;
     padding: 0.5em;
     font: bold 0.8em/1 "Oxanium", sans-serif;
+    text-align: center;
 }
