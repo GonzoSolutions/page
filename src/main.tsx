@@ -14,12 +14,6 @@ import "./main.css";
 //
 //
 
-import * as Material from "@mui/material";
-import * as Styles from "@mui/material/styles";
-
-//
-//
-
 import Banner from "./banner.tsx";
 import Menu from "./menu.tsx";
 import Desc from "./desc.tsx";
@@ -30,12 +24,6 @@ import Form from "./form.tsx";
 //
 
 const App = () => {
-  const theme = Styles.createTheme(
-    {
-      palette: { mode: 'dark' }
-    }
-  )
-
   return (
     <>
       <Banner />
