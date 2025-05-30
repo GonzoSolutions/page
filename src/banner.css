@@ -1,13 +1,13 @@
-banner {
+div#banner {
     display: grid;
     grid: auto / auto 50vw auto;
     background: #090909;
 }
 
-banner > left {}
-banner > right {}
+div#banner > #left {}
+div#banner > #right {}
 
-banner > content {
+div#banner > #content {
     display: block;
     align-items: center;
     align-content: center;
