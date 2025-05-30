@@ -14,13 +14,16 @@ export default () => {
             <div id="banner">
                 <div id="left"></div>
                 <div id="content">
-                    <img src={Logo} />
-                    <div>
-                        Gonzo
-                        Solutions
+                    <div id="logo">
+                        <img src={Logo} />
                     </div>
-                    <div>
-                        We put the human back in the loop
+                    <div id="name">
+                        GONZO
+                        <br />
+                        SOLUTIONS
+                    </div>
+                    <div id="slogan">
+                        WE PUT THE HUMAN BACK IN THE LOOP
                     </div>
                 </div>
                 <div id="right"></div>

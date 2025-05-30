@@ -1,7 +1,7 @@
 div#banner {
     display: grid;
     grid: auto / auto 50vw auto;
-    background: #090909;
+    font: bold 0.8em/1 "Oxanium", sans-serif;
 }
 
 div#banner > #left {}
@@ -9,7 +9,27 @@ div#banner > #right {}
 
 div#banner > #content {
     display: block;
+    margin: 0;
+    padding: 1em;
     align-items: center;
     align-content: center;
     text-align: center;
+}
+
+div#logo {
+    margin: 0;
+    padding: 0.25em;
+    font: bold 1em/1 "Oxanium", sans-serif;
+}
+
+div#name {
+    margin: 0;
+    padding: 0.25em;
+    font: bold 2em/1 "Oxanium", sans-serif;
+}
+
+div#slogan {
+    margin: 0;
+    padding: 0.5em;
+    font: bold 0.8em/1 "Oxanium", sans-serif;
 }

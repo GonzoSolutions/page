@@ -8,6 +8,12 @@ import * as ReactDOMClient from 'react-dom/client'
 //
 //
 
+import "./fonts.css";
+import "./main.css";
+
+//
+//
+
 import Banner from "./banner.tsx";
 import Menu from "./menu.tsx";
 
