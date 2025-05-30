@@ -8,6 +8,15 @@ div#banner {
 
 div#banner > #left {}
 div#banner > #right {}
+div#banner > #content {
+    display: block;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
 
 /* -------------------------------------------------_*/
 
@@ -31,18 +40,9 @@ div#banner > #right {}
 
 /* -------------------------------------------------_*/
 
-div#banner > #content {
-    display: block;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-}
-
 div#logo {
     margin: 0;
-    padding: 0.25em;
+    padding: 2em 0.25em;
     font: bold 1em/1 "Oxanium", sans-serif;
     text-align: center;
 }

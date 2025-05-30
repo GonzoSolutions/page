@@ -22,7 +22,7 @@ export default () => {
             <div id="content">
                 <ul>
                     {sections.map(
-                        (section) => <li> <a href="#"> {section.name} </a> </li>
+                        (section) => <li key={section.id}> <a href="#"> {section.name} </a> </li>
                     )}
                 </ul>
             </div>

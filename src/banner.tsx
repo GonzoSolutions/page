@@ -9,6 +9,7 @@ import Logo from "./assets/logo.svg";
 //
 
 export default () => {
+    const slogan = "WE PUT HUMANS BACK IN THE LOOP";
     return (
         <>
             <div id="banner">
@@ -23,7 +24,7 @@ export default () => {
                         SOLUTIONS
                     </div>
                     <div id="slogan">
-                        WE PUT THE HUMAN BACK IN THE LOOP
+                        {slogan}
                     </div>
                 </div>
                 <div id="right"></div>
