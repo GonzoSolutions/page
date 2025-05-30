@@ -1,0 +1,15 @@
+banner {
+    display: grid;
+    grid: auto / auto 50vw auto;
+    background: #090909;
+}
+
+banner > left {}
+banner > right {}
+
+banner > content {
+    display: block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}

@@ -8,10 +8,17 @@ import * as ReactDOMClient from 'react-dom/client'
 //
 //
 
+import Banner from "./banner.tsx";
+import Menu from "./menu.tsx";
+
+//
+//
+
 const element = document.querySelector('#root');
 const root = ReactDOMClient.createRoot(element!);
 root.render(
   <React.StrictMode>
-    <div> Gonzo Solutions </div>
+    <Banner />
+    <Menu />
   </React.StrictMode>
 );
