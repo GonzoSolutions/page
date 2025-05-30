@@ -10,6 +10,16 @@ body {
     height: 100vh;
 }
 
+a {
+    color: #f9f9f9;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: #090909;
+}
+
 img {
     margin: 0;
     padding: 0;
