@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+//
+// main.tsx
+//
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import * as React from 'react';
+import * as ReactDOMClient from 'react-dom/client'
+
+//
+//
+
+const element = document.querySelector('#root');
+const root = ReactDOMClient.createRoot(element!);
+root.render(
+  <React.StrictMode>
+    <div> Gonzo Solutions </div>
+  </React.StrictMode>
+);
