@@ -7,7 +7,7 @@ import "./team.css";
 //
 //
 
-export default () => {
+export default function Team() {
     const members = [
         { id: 0, name: { first: "torvald", last: "ask" }, title: "director" },
         { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "director" }
@@ -20,15 +20,17 @@ export default () => {
                     {
                         members.map(
                             (member) =>
-                                <div className="member">
+                                <div className="member" key={member.id}>
                                     <div id="picture">
                                         <img src={`/pictures/employees/${member.id}.png`} />
                                     </div>
-                                    <div id="name">
-                                        {member.name.first} {member.name.last}
-                                    </div>
-                                    <div id="title">
-                                        {member.title}
+                                    <div id="info">
+                                        <div id="names">
+                                            {member.name.first} {member.name.last}
+                                        </div>
+                                        <div id="title">
+                                            {member.title}
+                                        </div>
                                     </div>
                                 </div>
                         )

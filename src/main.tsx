@@ -2,8 +2,19 @@
 // main.tsx
 //
 
-import * as React from 'react';
-import * as ReactDOMClient from 'react-dom/client'
+import React from 'react';
+import ReactDOMClient from 'react-dom/client';
+
+//
+//
+
+import * as Emotion from '@emotion/react';
+import * as Material from '@mui/material';
+
+//
+//
+
+import * as Styles from '@mui/material/styles'
 
 //
 //
@@ -23,15 +34,24 @@ import Form from "./form.tsx";
 //
 //
 
-const App = () => {
+const themes = { 
+  dark: Styles.createTheme(
+    {
+      palette: { mode: 'dark' }
+    }
+  )
+};
+
+function App() {
+  
   return (
-    <>
+    <Emotion.ThemeProvider theme={themes.dark}>
       <Banner />
       <Menu />
       <Desc />
       <Team />
       <Form />
-    </>
+    </Emotion.ThemeProvider>
   )
 };
 

@@ -4,7 +4,8 @@
 
 export default () => {
     return (
-        <div>
+        <div style={{ background: '#000' }}>
+            FORM
         </div>
     )
 };

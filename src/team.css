@@ -11,9 +11,28 @@ div#team > #content {
     display: flex;
     gap: 1em;
     margin: 0;
-    padding: 2em;
+    padding: 2em 1em 1em;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+@media (width <= 600px) {
+    div#team {
+        display: block;
+    }
+
+    div#team > #left {
+        display: none;
+    }
+
+    div#team > #right {
+        display: none;
+    }
+
+    div#team > #content {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 div#team > #content .member {
@@ -26,7 +45,7 @@ div#team > #content .member {
 
 div#team > #content .member #picture {
     margin: 0;
-    padding: 1em;
+    padding: 0;
 }
 
 div#team > #content .member #picture img {
@@ -34,23 +53,25 @@ div#team > #content .member #picture img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 32px;
 }
 
-div#team > #content .member #name {
+div#team > #content .member #info {
+    margin: 0;
+    padding: 0.5em;
+}
+
+div#team > #content .member #info > #names {
     color: #ff2a3a;
-    font: normal 0.8em/1 "Oxanium", sans-serif;
+    font: normal 0.8em/1.5 "Oxanium", sans-serif;
     text-transform: uppercase;
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
-div#team > #content .member #title {
+div#team > #content .member #info > #title {
     color: #f9f9f9;
-    font: normal 0.5em/2 "Oxanium", sans-serif;
+    font: normal 0.5em/1 "Oxanium", sans-serif;
     text-transform: uppercase;
     margin: 0;
-    padding: 0.5em;
-    text-align: center;
+    padding: 0;
 }
