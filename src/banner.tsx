@@ -2,33 +2,61 @@
 // banner.tsx
 //
 
+import * as Material from '@mui/material';
+
+//
+//
+
 import "./banner.css";
-import Logo from "./assets/logo.svg";
+
+//
+//
+
+import LogoImage from "./assets/logo.svg";
+
+//
+//
+
+const Logo = ({ image }) => {
+    return <Material.Box> <img src={image} /> </Material.Box>
+}
+
+const Name = ({ primary, secondary }) => {
+    return (
+        <Material.Box>
+            <Material.Box>
+                {primary}
+            </Material.Box>
+            <Material.Box>
+                {secondary}
+            </Material.Box>
+        </Material.Box>
+    );
+}
+
+const Slogan = ({ text }) => {
+    return <Material.Box> {text} </Material.Box>
+}
 
 //
 //
 
 export default () => {
-    const slogan = "WE PUT HUMANS BACK IN THE LOOP";
     return (
-        <>
-            <div id="banner">
-                <div id="left"></div>
-                <div id="content">
-                    <div id="logo">
-                        <img src={Logo} />
-                    </div>
-                    <div id="name">
-                        GONZO
-                        <br />
-                        SOLUTIONS
-                    </div>
-                    <div id="slogan">
-                        {slogan}
-                    </div>
+        <Material.Grid container size={3} id="banner">
+            <Material.Grid size="grow"></Material.Grid>
+            <Material.Grid size={5} alignItems="center" sx={{ width: '100%', height: '100%' }}>
+                <Material.Box id="logo">
+                    <Logo image={LogoImage} />
+                </Material.Box>
+                <Material.Box id="name">
+                    <Name primary="GONZO" secondary="SOLUTIONS" />
+                </Material.Box>
+                <div id="slogan">
+                    <Slogan text="WE PUT HUMANS BACK IN THE LOOP" />
                 </div>
-                <div id="right"></div>
-            </div>
-        </>
+            </Material.Grid>
+            <Material.Grid size="grow"></Material.Grid>
+        </Material.Grid>
     )
 };
