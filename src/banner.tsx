@@ -2,6 +2,8 @@
 // banner.tsx
 //
 
+import React from 'react';
+
 import * as Material from '@mui/material';
 
 //
@@ -43,9 +45,9 @@ const Slogan = ({ text }: { text: string }) => {
 
 export default () => {
     return (
-        <Material.Grid container size={3} id="banner">
+        <Material.Grid container size={3} id="banner" sx={{ position: 'relative' }}>
             <Material.Grid size="grow"></Material.Grid>
-            <Material.Grid size={5} alignItems="center" sx={{ width: '100%', height: '100%' }}>
+            <Material.Grid size={5} alignItems="center" sx={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Material.Box id="logo">
                     <Logo image={LogoImage} />
                 </Material.Box>
@@ -57,6 +59,7 @@ export default () => {
                 </div>
             </Material.Grid>
             <Material.Grid size="grow"></Material.Grid>
+            <Material.Box sx={{ position: 'absolute', background: 'rgba(0,0,0,0.0)', width: '100%', height: '100%' }} />
         </Material.Grid>
     )
 };

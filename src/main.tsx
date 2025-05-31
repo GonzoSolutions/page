@@ -29,7 +29,6 @@ import Banner from "./banner.tsx";
 import Menu from "./menu.tsx";
 import Desc from "./desc.tsx";
 import Team from "./team.tsx";
-import Form from "./form.tsx";
 
 //
 //
@@ -50,7 +49,6 @@ function App() {
       <Menu />
       <Desc />
       <Team />
-      <Form />
     </Emotion.ThemeProvider>
   )
 };
