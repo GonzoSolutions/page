@@ -1,5 +1,6 @@
 div#desc {
     display: grid;
+    background: #060606;
     grid: auto / auto 50vw auto;
     font: bold 0.5em/1.5 "Oxanium", sans-serif;
     width: 100%;
