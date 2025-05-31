@@ -2,8 +2,7 @@
 // banner.tsx
 //
 
-import React from 'react';
-
+//import React from 'react';
 import * as Material from '@mui/material';
 
 //

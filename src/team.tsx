@@ -15,10 +15,6 @@ import "./team.css";
 //
 //
 
-const Member = () => {
-    return <Material.Box></Material.Box>
-};
-
 export default function Team() {
     const members = [
         { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO" },
