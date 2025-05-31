@@ -17,11 +17,11 @@ import LogoImage from "./assets/logo.svg";
 //
 //
 
-const Logo = ({ image }) => {
+const Logo = ({ image }: { image: string }) => {
     return <Material.Box> <img src={image} /> </Material.Box>
 }
 
-const Name = ({ primary, secondary }) => {
+const Name = ({ primary, secondary }: { primary: string, secondary: string }) => {
     return (
         <Material.Box>
             <Material.Box>
@@ -34,7 +34,7 @@ const Name = ({ primary, secondary }) => {
     );
 }
 
-const Slogan = ({ text }) => {
+const Slogan = ({ text }: { text: string }) => {
     return <Material.Box> {text} </Material.Box>
 }
 
