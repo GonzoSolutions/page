@@ -2,22 +2,25 @@
 // desc.tsx
 //
 
-import "./desc.css";
+import * as Material from '@mui/material';
 
 //
 //
 
-export default () => {
-    const text = "Systems fail because they forget people. At Gonzo Solutions, we understand that there is no one-size-fits-all when it comes to addressing the human factor in an organization. Every organization is unique. Our secret sauce is the lessons learned from many years of solving technical and human problems in both industry and academia. We understand technology. We understand system integration. We understand security. We understand humans. The Gonzo approach is polished when it counts and unapologetic when it matters. No more patch jobs on soul-level issues; we put humans back in the loop.";
+export default ({ text }: { text: string }) => {
     return (
-        <>
-            <div id="desc">
-                <div id="left"></div>
-                <div id="content">
+        <Material.Grid container spacing={2} sx={{ background: '#060606', margin: 0, padding: '1em', fontFamily: 'Oxanium' }}>
+            <Material.Grid size="grow">
+            </Material.Grid>
+
+            <Material.Grid size={{ xs: 12, sm: 10, md: 10, lg: 4 }}>
+                <Material.Typography variant="body1" textAlign="center">
                     {text}
-                </div>
-                <div id="right"></div>
-            </div>
-        </>
+                </Material.Typography>
+            </Material.Grid>
+
+            <Material.Grid size="grow">
+            </Material.Grid>
+        </Material.Grid>
     )
 };

@@ -10,31 +10,29 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 //
 //
 
-import "./team.css";
-
-//
-//
-
 export default function Team() {
     const members = [
         { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO" },
-        { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO" } 
+        { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO" }, 
+        //{ id: 2, name: { first: "adolf", last: "hitler" }, title: "CFO" },
     ]
     return (
         <>
             <Material.Grid container size={3} spacing={2}>
-                <Material.Grid size="grow"></Material.Grid>
+                <Material.Grid size="grow">
+                </Material.Grid>
+
                 <Material.Grid container spacing={2} sx={{ margin: 0, padding: '1em' }}>
                     {
                         members.map(
                             (member) =>
                                 <Material.Grid key={member.id} size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                    <Material.Card elevation={5} sx={{ position: 'relative', background: '#060606' }}>
+                                    <Material.Card elevation={5} sx={{ position: 'relative', background: '#060606', borderRadius: 0 }}>
                                         <Material.Box component="a" href={`https://linkedin.com/in/${member.name.first}-${member.name.last}`}>
                                             <Material.Box sx={{ position: 'relative' }}>
                                                 <Material.CardMedia component="img" height="256" image={`/pictures/employees/${member.id}.png`} alt={member.name.first} />
                                                 <Material.Box className="overlay" sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.9)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0,
-                                                        transition: 'opacity 500ms',
+                                                        transition: 'opacity 250ms',
                                                         '&:hover': {
                                                             opacity: 1
                                                         }
@@ -57,7 +55,9 @@ export default function Team() {
                         )
                     }
                 </Material.Grid>
-                <Material.Grid size="grow"></Material.Grid>
+
+                <Material.Grid size="grow">
+                </Material.Grid>
             </Material.Grid>
         </>
     )
