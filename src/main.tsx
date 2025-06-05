@@ -102,12 +102,10 @@ function App() {
 
   const toggleMode = () => {
     setMode((previous) => (previous === 'dark') ? 'light' : 'dark');
-    console.log('toggle');
   }
 
   const theme = React.useMemo(
     () => {
-      toggleMode();
       return (mode === 'dark') ? themes.dark : themes.light;
     }, [mode]
   );
@@ -115,6 +113,7 @@ function App() {
   return (
     <Emotion.ThemeProvider theme={theme}>
       <Material.CssBaseline />
+      <Material.Button style={{ display: 'none' }} onClick={toggleMode} />
       <Banner />
       <Desc text="Systems fail because they forget people. At Gonzo Solutions, we understand that there is no one-size-fits-all when it comes to addressing the human factor in an organization. Every organization is unique. Our secret sauce is the lessons learned from many years of solving technical and human problems in both industry and academia. We understand technology. We understand system integration. We understand security. We understand humans. The Gonzo approach is polished when it counts and unapologetic when it matters. No more patch jobs on soul-level issues; we put humans back in the loop." />
       <Team />
