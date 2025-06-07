@@ -4,12 +4,11 @@
 
 import React from 'react';
 import ReactDOMClient from 'react-dom/client';
+
+//
+//
+
 import { BrowserRouter, Routes } from 'react-router-dom';
-
-//
-//
-
-//import LogoImage from "./assets/logo.svg";
 
 //
 //
@@ -33,6 +32,7 @@ import "./main.css";
 
 import Banner from "./components/banner.tsx";
 //import Feed from "./components/feed.tsx";
+import Team from "./components/team.tsx";
 import Footer from "./components/footer.tsx";
 
 //
@@ -40,13 +40,6 @@ import Footer from "./components/footer.tsx";
 
 //import Menu from "./menu.tsx";
 import Desc from "./desc.tsx";
-import Team from "./team.tsx";
-
-//
-//
-
-//import TeamPage from "./pages/team.tsx";
-//import ResearchPage from "./pages/research.tsx";
 
 //
 //
@@ -97,26 +90,25 @@ const themes = {
 //
 //
 
+const articles = [
+
+]
+
 function App() {
-  const [ mode, setMode ] = React.useState('dark');
-
-  const toggleMode = () => {
-    setMode((previous) => (previous === 'dark') ? 'light' : 'dark');
-  }
-
-  const theme = React.useMemo(
-    () => {
-      return (mode === 'dark') ? themes.dark : themes.light;
-    }, [mode]
-  );
+  const name = {
+    primary: 'gonzo', 
+    secondary: 'solutions', 
+  };
+  const slogan = 'we put humans back in the loop';
 
   return (
-    <Emotion.ThemeProvider theme={theme}>
+    <Emotion.ThemeProvider theme={themes.dark}>
       <Material.CssBaseline />
-      <Material.Button style={{ display: 'none' }} onClick={toggleMode} />
-      <Banner />
-      <Desc text="Systems fail because they forget people. At Gonzo Solutions, we understand that there is no one-size-fits-all when it comes to addressing the human factor in an organization. Every organization is unique. Our secret sauce is the lessons learned from many years of solving technical and human problems in both industry and academia. We understand technology. We understand system integration. We understand security. We understand humans. The Gonzo approach is polished when it counts and unapologetic when it matters. No more patch jobs on soul-level issues; we put humans back in the loop." />
+
+      <Banner primary={name.primary} secondary={name.secondary} slogan={slogan} />
+      <Desc text='Systems fail because they forget people. At Gonzo Solutions, we understand that there is no one-size-fits-all when it comes to addressing the human factor in an organization. Every organization is unique. Our secret sauce is the lessons learned from many years of solving technical and human problems in both industry and academia. We understand technology. We understand system integration. We understand security. We understand humans. The Gonzo approach is polished when it counts and unapologetic when it matters. No more patch jobs on soul-level issues; we put humans back in the loop.' />
       <Team />
+
       <BrowserRouter>
         <Material.Container>
           <Routes>
