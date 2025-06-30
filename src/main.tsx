@@ -90,10 +90,6 @@ const themes = {
 //
 //
 
-const articles = [
-
-]
-
 function App() {
   const name = {
     primary: 'gonzo', 
