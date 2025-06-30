@@ -27,7 +27,7 @@ export default function Team() {
                         members.map(
                             (member) =>
                                 <Material.Grid key={member.id} size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
-                                    <Material.Box sx={{ position: 'relative', background: '#060606' }}>
+                                    <Material.Box sx={{ position: 'relative' }}>
                                         <Material.Box component="a" href={`https://linkedin.com/in/${member.name.first}-${member.name.last}`}>
                                             <Material.Box sx={{ position: 'relative', overflow: 'hidden', '&:hover img': { transform: 'scale(1.05)' }}}>
                                                 <Material.CardMedia component="img" height="256" image={`/pictures/employees/${member.id}.png`} alt={member.name.first} sx={{ transition: 'transform 0.3s ease-in-out' }} />
@@ -42,12 +42,9 @@ export default function Team() {
                                                 </Material.Box>
                                             </Material.Box>
                                         </Material.Box>
-                                        <Material.CardContent>
+                                        <Material.CardContent style={{ textAlign: 'center' }}>
                                             <Material.Typography variant="h6" style={{ textTransform: 'uppercase', color: '#ff2a3a' }}>
                                                 {member.name.first} {member.name.last}
-                                            </Material.Typography>
-                                            <Material.Typography variant="body2" style={{ textTransform: 'uppercase', color: '#f9f9f9' }}>
-                                                {member.title}
                                             </Material.Typography>
                                         </Material.CardContent>
                                     </Material.Box>

@@ -18,18 +18,18 @@ export default ({ primary, secondary, slogan }: { primary: string, secondary: st
         <Material.Grid container size={3} sx={{ position: 'relative' }}>
             <Material.Grid size="grow">
             </Material.Grid>
-            <Material.Grid size={5} textAlign="center" sx={{ width: '100%', height: '100%' }}>
+            <Material.Grid size={5} textAlign="center" sx={{ width: '100%', height: '100%', padding: '1.5em 0' }}>
                 <Material.Box component="img" src={LogoImage} />
                 <Material.Box>
-                    <Material.Typography variant="h5" textTransform='uppercase' lineHeight={1}>
+                    <Material.Typography variant="h4" textTransform='uppercase' lineHeight={1}>
                         {primary}
                     </Material.Typography>
-                    <Material.Typography variant="h5" textTransform='uppercase' lineHeight={1}>
+                    <Material.Typography variant="h4" textTransform='uppercase' lineHeight={1}>
                         {secondary}
                     </Material.Typography>
                 </Material.Box>
                 <Material.Box>
-                    <Material.Typography variant="body2" lineHeight={6} textTransform='uppercase'>
+                    <Material.Typography variant="h6" lineHeight={2} textTransform='uppercase'>
                         {slogan}
                     </Material.Typography>
                 </Material.Box>
