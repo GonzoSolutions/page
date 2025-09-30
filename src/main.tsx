@@ -33,13 +33,13 @@ import "./main.css";
 import Banner from "./components/banner.tsx";
 //import Feed from "./components/feed.tsx";
 import Team from "./components/team.tsx";
-import Footer from "./components/footer.tsx";
+//import Footer from "./components/footer.tsx";
 
 //
 //
 
 //import Menu from "./menu.tsx";
-import Desc from "./desc.tsx";
+//import Desc from "./desc.tsx";
 
 //
 //
