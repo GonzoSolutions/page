@@ -14,7 +14,6 @@ export default function Team() {
     const members = [
         { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO" },
         { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO" }, 
-        //{ id: 2, name: { first: "adolf", last: "hitler" }, title: "CFO" },
     ]
     return (
         <>

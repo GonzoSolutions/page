@@ -95,14 +95,13 @@ function App() {
     primary: 'gonzo', 
     secondary: 'solutions', 
   };
-  const slogan = 'we put humans back in the loop';
+  const slogan = 'Immerse. Understand. Execute.';
 
   return (
     <Emotion.ThemeProvider theme={themes.dark}>
       <Material.CssBaseline />
 
       <Banner primary={name.primary} secondary={name.secondary} slogan={slogan} />
-      <Desc text='Systems fail because they forget people. At Gonzo Solutions, we understand that there is no one-size-fits-all when it comes to addressing the human factor in an organization. Every organization is unique. Our secret sauce is the lessons learned from many years of solving technical and human problems in both industry and academia. We understand technology. We understand system integration. We understand security. We understand humans. The Gonzo approach is polished when it counts and unapologetic when it matters. No more patch jobs on soul-level issues; we put humans back in the loop.' />
       <Team />
 
       <BrowserRouter>
@@ -112,7 +111,17 @@ function App() {
         </Material.Container>
       </BrowserRouter>
 
-      <Footer copyright="GraveValley Design" />
+      <Material.Grid container size={3} spacing={2}>
+        <Material.Grid size="grow">
+        </Material.Grid>
+
+        <Material.Grid container spacing={2} sx={{ margin: 0, padding: '1em' }}>
+          <Material.Button variant="contained" color="primary" href="mailto:torvald.ask@proton.me">Contact</Material.Button>
+        </Material.Grid>
+        <Material.Grid size="grow">
+        </Material.Grid>
+      </Material.Grid>
+
     </Emotion.ThemeProvider>
   )
 };
