@@ -111,16 +111,18 @@ function App() {
         </Material.Container>
       </BrowserRouter>
 
-      <Material.Grid container size={3} spacing={2}>
-        <Material.Grid size="grow">
-        </Material.Grid>
+      <Material.Paper sx={{ background: '#060606', margin: 0, padding: '1em' }} elevation={0}>
+        <Material.Grid container size={3} spacing={2}>
+          <Material.Grid size="grow">
+          </Material.Grid>
 
-        <Material.Grid container spacing={2} sx={{ margin: 0, padding: '1em' }}>
-          <Material.Button variant="contained" color="primary" href="mailto:torvald.ask@proton.me">Contact</Material.Button>
+          <Material.Grid container spacing={2} sx={{ margin: 0, padding: 0 }}>
+            <Material.Button variant="contained" color="primary" href="mailto:torvald.ask@proton.me">Contact</Material.Button>
+          </Material.Grid>
+          <Material.Grid size="grow">
+          </Material.Grid>
         </Material.Grid>
-        <Material.Grid size="grow">
-        </Material.Grid>
-      </Material.Grid>
+      </Material.Paper>
 
     </Emotion.ThemeProvider>
   )

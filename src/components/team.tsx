@@ -12,8 +12,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export default function Team() {
     const members = [
-        { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO" },
-        { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO" }, 
+        { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO", linkedin: "torvaldask" },
+        { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO", linkedin: "erik-bjornoy" }, 
     ]
     return (
         <>
@@ -27,7 +27,7 @@ export default function Team() {
                             (member) =>
                                 <Material.Grid key={member.id} size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
                                     <Material.Box sx={{ position: 'relative' }}>
-                                        <Material.Box component="a" href={`https://linkedin.com/in/${member.name.first}-${member.name.last}`}>
+                                        <Material.Box component="a" href={`https://linkedin.com/in/${member.linkedin}`} target="_blank">
                                             <Material.Box sx={{ position: 'relative', overflow: 'hidden', '&:hover img': { transform: 'scale(1.05)' }}}>
                                                 <Material.CardMedia component="img" height="256" image={`/pictures/employees/${member.id}.png`} alt={member.name.first} sx={{ transition: 'transform 0.3s ease-in-out' }} />
                                                 <Material.Box className="overlay" sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.9)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0,
