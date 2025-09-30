@@ -14,6 +14,7 @@ export default function Team() {
     const members = [
         { id: 0, name: { first: "torvald", last: "ask" }, title: "CEO", linkedin: "torvaldask" },
         { id: 1, name: { first: "erik", last: "bjørnøy" }, title: "CTO", linkedin: "erik-bjornoy" }, 
+        { id: 2, name: { first: "vu", last: "tran" }, title: "CFO", linkedin: "vu-tran-a60b29275" }, 
     ]
     return (
         <>
@@ -21,16 +22,16 @@ export default function Team() {
                 <Material.Grid size="grow">
                 </Material.Grid>
 
-                <Material.Grid container spacing={2} sx={{ margin: 0, padding: '1em' }}>
+                <Material.Grid container spacing={1} sx={{ margin: 0, padding: '1em' }}>
                     {
                         members.map(
                             (member) =>
-                                <Material.Grid key={member.id} size={{ xs: 12, sm: 6, md: 6, lg: 6 }}>
+                                <Material.Grid key={member.id} size={{ xs: 12, sm: 6, md: 4, lg: 4 }}>
                                     <Material.Box sx={{ position: 'relative' }}>
                                         <Material.Box component="a" href={`https://linkedin.com/in/${member.linkedin}`} target="_blank">
-                                            <Material.Box sx={{ position: 'relative', overflow: 'hidden', '&:hover img': { transform: 'scale(1.05)' }}}>
-                                                <Material.CardMedia component="img" height="256" image={`/pictures/employees/${member.id}.png`} alt={member.name.first} sx={{ transition: 'transform 0.3s ease-in-out' }} />
-                                                <Material.Box className="overlay" sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.9)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0,
+                                            <Material.Box sx={{ position: 'relative', overflow: 'hidden', '&:hover img': { transform: 'scale(1.025)' }}}>
+                                                <Material.CardMedia component="img" width="256" height="256" image={`/pictures/employees/${member.id}.png`} alt={member.name.first} sx={{ transition: 'transform 0.3s ease-in-out' }} />
+                                                <Material.Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', background: 'rgba(0, 0, 0, 0.9)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0,
                                                         transition: 'opacity 250ms ease-in-out',
                                                         '&:hover': {
                                                             opacity: 1
